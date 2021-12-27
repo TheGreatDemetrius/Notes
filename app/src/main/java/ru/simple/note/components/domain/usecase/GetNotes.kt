@@ -2,7 +2,7 @@ package ru.simple.note.components.domain.usecase
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import ru.simple.note.components.domain.model.Note
+import ru.simple.note.components.domain.model.NoteModel
 import ru.simple.note.components.domain.repository.NoteRepository
 import ru.simple.note.components.domain.util.OrderProperties
 import ru.simple.note.components.domain.util.OrderType
@@ -12,7 +12,7 @@ class GetNotes(//классы вариантов использования до
 ) {
     operator fun invoke(
         orderProperties: OrderProperties = OrderProperties.Date(OrderType.Descending)
-    ): Flow<List<Note>> = repository.getNotes().map { notes ->
+    ): Flow<List<NoteModel>> = repository.getNotes().map { notes ->
         if (orderProperties.orderType == OrderType.Ascending)
             when (orderProperties) {
                 is OrderProperties.Title -> notes.sortedBy { note -> note.title.lowercase() }
@@ -25,6 +25,5 @@ class GetNotes(//классы вариантов использования до
                 is OrderProperties.Date -> notes.sortedByDescending { note -> note.date }
                 is OrderProperties.Color -> notes.sortedByDescending { note -> note.color }
             }
-
     }
 }
