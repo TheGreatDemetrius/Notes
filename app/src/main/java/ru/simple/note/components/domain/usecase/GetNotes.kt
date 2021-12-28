@@ -7,7 +7,7 @@ import ru.simple.note.components.domain.repository.NoteRepository
 import ru.simple.note.components.domain.util.OrderProperties
 import ru.simple.note.components.domain.util.OrderType
 
-class GetNotes(//классы вариантов использования должны содержать только одну публичную функцию
+class GetNotes(
     private val repository: NoteRepository
 ) {
     operator fun invoke(

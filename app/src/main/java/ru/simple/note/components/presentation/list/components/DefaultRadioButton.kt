@@ -1,4 +1,4 @@
-package ru.simple.note.components.presentation.item.components
+package ru.simple.note.components.presentation.list.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer

@@ -1,4 +1,4 @@
-package ru.simple.note.components.presentation.item
+package ru.simple.note.components.presentation.list
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.clickable
@@ -19,8 +19,8 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import ru.simple.note.R
 import ru.simple.note.components.domain.util.Dimensions.MEDIUM
-import ru.simple.note.components.presentation.item.components.NoteItem
-import ru.simple.note.components.presentation.item.components.OrderSection
+import ru.simple.note.components.presentation.list.components.NoteItem
+import ru.simple.note.components.presentation.list.components.OrderSection
 
 @ExperimentalAnimationApi
 @Composable

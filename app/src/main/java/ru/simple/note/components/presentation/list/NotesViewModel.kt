@@ -1,4 +1,4 @@
-package ru.simple.note.components.presentation.item
+package ru.simple.note.components.presentation.list
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf

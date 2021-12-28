@@ -11,7 +11,7 @@ data class Note(
     val description: String,
     val date: Long,
     val color: Int,
-    @PrimaryKey val id: Int? = null//зачем? если можно использовать автоинкремент
+    @PrimaryKey val id: Int? = null
 ) {
     companion object {
         val noteColor = listOf(RedOrange, LightGreen, Violet, BabyBlue, RedPink)

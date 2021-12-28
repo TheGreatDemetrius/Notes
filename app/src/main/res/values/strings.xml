@@ -9,4 +9,6 @@
     <string name="descending">Descending</string>
     <string name="sort">Sort</string>
     <string name="delete">Delete</string>
+    <string name="enter_title">Enter a title</string>
+    <string name="enter_description">Enter a description</string>
 </resources>

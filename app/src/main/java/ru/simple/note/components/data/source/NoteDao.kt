@@ -16,5 +16,5 @@ interface NoteDao {
     suspend fun insertNote(note: Note)
 
     @Delete
-    suspend fun deleteNote(note: Note)//зачем тащить всю задачу? если можно тащить только идентификатор
+    suspend fun deleteNote(note: Note)
 }

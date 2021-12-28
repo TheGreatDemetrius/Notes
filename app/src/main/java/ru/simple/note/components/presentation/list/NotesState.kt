@@ -1,4 +1,4 @@
-package ru.simple.note.components.presentation.item
+package ru.simple.note.components.presentation.list
 
 import ru.simple.note.components.domain.model.Note
 import ru.simple.note.components.domain.util.OrderProperties
