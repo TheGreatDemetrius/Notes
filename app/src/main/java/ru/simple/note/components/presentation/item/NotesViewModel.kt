@@ -1,4 +1,4 @@
-package ru.simple.note.components.presentation.unit
+package ru.simple.note.components.presentation.item
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -9,7 +9,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import ru.simple.note.components.domain.model.NoteModel
+import ru.simple.note.components.domain.model.Note
 import ru.simple.note.components.domain.usecase.ActionsNote
 import ru.simple.note.components.domain.util.OrderProperties
 import ru.simple.note.components.domain.util.OrderType
@@ -21,8 +21,8 @@ class NotesViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _state = mutableStateOf(NotesState())
-    private val state: State<NotesState> = _state
-    private var recentlyDeleteNote: NoteModel? = null
+    val state: State<NotesState> = _state
+    private var recentlyDeleteNote: Note? = null
     private var getNotesJob: Job? = null
 
     init {

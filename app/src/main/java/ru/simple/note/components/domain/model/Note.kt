@@ -6,13 +6,12 @@ import ru.simple.note.ui.theme.*
 import java.lang.Exception
 
 @Entity
-data class NoteModel(
+data class Note(
     val title: String,
     val description: String,
     val date: Long,
     val color: Int,
     @PrimaryKey val id: Int? = null//зачем? если можно использовать автоинкремент
-//может потому что мы хотим контролировать идентификатор чтобы обновлять способом замены
 ) {
     companion object {
         val noteColor = listOf(RedOrange, LightGreen, Violet, BabyBlue, RedPink)

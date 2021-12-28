@@ -1,14 +1,14 @@
 package ru.simple.note.components.domain.repository
 
 import kotlinx.coroutines.flow.Flow
-import ru.simple.note.components.domain.model.NoteModel
+import ru.simple.note.components.domain.model.Note
 
 interface NoteRepository {
-    fun getNotes(): Flow<List<NoteModel>>
+    fun getNotes(): Flow<List<Note>>
 
-    suspend fun getNoteById(id: Int) : NoteModel
+    suspend fun getNoteById(id: Int) : Note
 
-    suspend fun insertNote(note: NoteModel)
+    suspend fun insertNote(note: Note)
 
-    suspend fun deleteNote(note: NoteModel)
+    suspend fun deleteNote(note: Note)
 }
