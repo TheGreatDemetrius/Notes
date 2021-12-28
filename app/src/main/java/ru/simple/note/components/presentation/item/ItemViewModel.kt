@@ -37,9 +37,9 @@ class ItemViewModel @Inject constructor(
             hint = res.getString(R.string.enter_description)
         )
     )
-    private val description: State<TextFieldState> = _description
+    val description: State<TextFieldState> = _description
 
-    private val _color = mutableStateOf(Note.noteColor.random().toArgb())
+    private val _color = mutableStateOf(Note.colors.random().toArgb())
     val color: State<Int> = _color
 
     private val _eventFlow = MutableSharedFlow<UiEvent>()
