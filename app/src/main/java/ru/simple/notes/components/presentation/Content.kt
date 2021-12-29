@@ -24,24 +24,17 @@ fun Content() {
         }
         composable(
             route = Navigation.ItemScreen.route +
-                    "?noteId={noteId}&noteColor={noteColor}",//необязательные аргументы
+                    "?noteId={noteId}",//необязательный аргумент
             arguments = listOf(
                 navArgument(
                     name = "noteId"
                 ) {
                     type = NavType.IntType
                     defaultValue = -1
-                },
-                navArgument(
-                    name = "noteColor"
-                ) {
-                    type = NavType.IntType
-                    defaultValue = -1
                 }
             )
         ) {
-            val color = it.arguments?.getInt("noteColor") ?: -1
-            ItemScreen(color = color, navController = navController)
+            ItemScreen(navController = navController)
         }
     }
 }

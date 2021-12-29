@@ -58,7 +58,7 @@ class ItemViewModel @Inject constructor(
                         )
                         _description.value = description.value.copy(
                             text = note.description,
-                            isHintVisible = false
+                            isHintVisible = note.description.isBlank()
                         )
                         _color.value = note.color
                     }
