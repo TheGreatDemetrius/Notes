@@ -1,0 +1,18 @@
+<resources>
+    <string name="add">Добавить</string>
+    <string name="app_name">Заметки</string>
+    <string name="ascending">По возрастанию</string>
+    <string name="color">Цвет</string>
+    <string name="date">Дата</string>
+    <string name="delete">Удалить</string>
+    <string name="descending">По убыванию</string>
+    <string name="enter_description">Введите описание</string>
+    <string name="enter_title">Введите заголовок</string>
+    <string name="enter_title_for_note">Введите название заметки.</string>
+    <string name="failed_save_note">Не удалось сохранить заметку.</string>
+    <string name="note_deleted">Заметка удалена.</string>
+    <string name="save">Сохранить</string>
+    <string name="sort">Сортировать</string>
+    <string name="title">Заголовок</string>
+    <string name="undo">ОТМЕНИТЬ</string>
+</resources>

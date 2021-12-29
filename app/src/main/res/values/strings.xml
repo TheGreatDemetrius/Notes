@@ -10,7 +10,7 @@
     <string name="enter_title">Enter a title</string>
     <string name="enter_title_for_note">Enter a title for the note.</string>
     <string name="failed_save_note">Failed to save note.</string>
-    <string name="note_deleted">Note deleted</string>
+    <string name="note_deleted">Note deleted.</string>
     <string name="save">Save</string>
     <string name="sort">Sort</string>
     <string name="title">Title</string>

@@ -120,6 +120,7 @@ fun ItemScreen(
             }
             Spacer(modifier = Modifier.height(MEDIUM))
             TextFieldHint(
+                modifier = Modifier.fillMaxWidth(),
                 text = titleState.text,
                 hint = titleState.hint,
                 onValueChange = {
@@ -135,6 +136,7 @@ fun ItemScreen(
             )
             Spacer(modifier = Modifier.height(MEDIUM))
             TextFieldHint(
+                modifier = Modifier.fillMaxSize(),
                 text = descriptionState.text,
                 hint = descriptionState.hint,
                 onValueChange = {
@@ -144,8 +146,7 @@ fun ItemScreen(
                     viewModel.onEvent(ItemEvent.ChangeDescriptionFocus(it))
                 },
                 isHintVisible = descriptionState.isHintVisible,
-                textStyle = TextStyle(fontSize = 20.sp),
-                modifier = Modifier.fillMaxHeight()
+                textStyle = TextStyle(fontSize = 20.sp)
             )
         }
     }
