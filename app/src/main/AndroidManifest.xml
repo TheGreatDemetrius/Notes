@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ru.simple.note">
+    package="ru.simple.notes">
 
     <application
-        android:name=".NoteApp"
+        android:name="ru.simple.notes.NoteApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,10 +11,11 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.Note">
         <activity
-            android:name=".components.presentation.MainActivity"
+            android:name="ru.simple.notes.components.presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Note.NoActionBar">
+            android:theme="@style/Theme.Note.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

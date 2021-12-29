@@ -1,14 +1,18 @@
 <resources>
+    <string name="add">Add</string>
     <string name="app_name">Notes</string>
-    <string name="note_deleted">Note deleted</string>
-    <string name="undo">UNDO</string>
-    <string name="title">Title</string>
-    <string name="date">Date</string>
-    <string name="color">Color</string>
     <string name="ascending">Ascending</string>
-    <string name="descending">Descending</string>
-    <string name="sort">Sort</string>
+    <string name="color">Color</string>
+    <string name="date">Date</string>
     <string name="delete">Delete</string>
-    <string name="enter_title">Enter a title</string>
+    <string name="descending">Descending</string>
     <string name="enter_description">Enter a description</string>
+    <string name="enter_title">Enter a title</string>
+    <string name="enter_title_for_note">Enter a title for the note.</string>
+    <string name="failed_save_note">Failed to save note.</string>
+    <string name="note_deleted">Note deleted</string>
+    <string name="save">Save</string>
+    <string name="sort">Sort</string>
+    <string name="title">Title</string>
+    <string name="undo">UNDO</string>
 </resources>

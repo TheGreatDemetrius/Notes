@@ -9,7 +9,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "ru.simple.note"
+        applicationId "ru.simple.notes"
         minSdk 21
         targetSdk 31
         versionCode 1
