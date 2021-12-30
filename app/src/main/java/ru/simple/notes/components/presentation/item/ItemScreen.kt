@@ -22,10 +22,10 @@ import kotlinx.coroutines.flow.collectLatest
 import ru.simple.notes.R
 import ru.simple.notes.components.domain.model.Note
 import ru.simple.notes.components.presentation.util.Dimensions.MEDIUM
-import ru.simple.notes.components.presentation.util.Dimensions.SMALL
 import ru.simple.notes.components.presentation.item.components.TextFieldHint
 import ru.simple.notes.components.presentation.util.Dimensions.CIRCLE_BUTTON_BORDER
 import ru.simple.notes.components.presentation.util.Dimensions.CIRCLE_BUTTON_SIZE
+import ru.simple.notes.components.presentation.util.Dimensions.LIST_BOTTOM_PADDING
 import ru.simple.notes.components.presentation.util.Dimensions.MIN_DESCRIPTION_HEIGHT
 
 @Composable
@@ -64,13 +64,13 @@ fun ItemScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .background(color = Color(viewModel.color.value))
-                .padding(MEDIUM)
+                .padding(horizontal = MEDIUM)
                 .verticalScroll(rememberScrollState())
         ) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(SMALL),
+                    .padding(vertical = MEDIUM),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Note.colors.forEach { color ->
@@ -92,7 +92,6 @@ fun ItemScreen(
                     )
                 }
             }
-            Spacer(modifier = Modifier.height(MEDIUM))
             TextFieldHint(
                 text = titleState.text,
                 hint = titleState.hint,
@@ -121,6 +120,7 @@ fun ItemScreen(
                 isHintVisible = descriptionState.isHintVisible,
                 textStyle = TextStyle(fontSize = 20.sp)
             )
+            Spacer(modifier = Modifier.height(LIST_BOTTOM_PADDING))
         }
     }
 }
