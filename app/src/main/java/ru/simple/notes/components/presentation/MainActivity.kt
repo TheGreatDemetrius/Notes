@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.ui.graphics.toArgb
 import dagger.hilt.android.AndroidEntryPoint
+import ru.simple.notes.ui.theme.DarkGray
 import ru.simple.notes.ui.theme.NoteTheme
 
 @ExperimentalAnimationApi
@@ -16,8 +18,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             NoteTheme {
+                window.navigationBarColor = DarkGray.toArgb()
                 Surface(color = MaterialTheme.colors.background) {
-                    Content()
+                    MainContent()
                 }
             }
         }

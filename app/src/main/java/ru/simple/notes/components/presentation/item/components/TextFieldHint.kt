@@ -1,6 +1,7 @@
 package ru.simple.notes.components.presentation.item.components
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Text
@@ -25,7 +26,9 @@ fun TextFieldHint(
 ) {
     Box {
         BasicTextField(
-            modifier = modifier.onFocusChanged { onFocusChange(it) },
+            modifier = modifier
+                .fillMaxWidth()
+                .onFocusChanged { onFocusChange(it) },
             value = text,
             onValueChange = onValueChange,
             singleLine = singleLine,

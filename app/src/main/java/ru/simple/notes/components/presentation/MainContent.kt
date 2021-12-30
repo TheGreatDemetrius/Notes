@@ -13,7 +13,7 @@ import ru.simple.notes.components.presentation.util.Navigation
 
 @ExperimentalAnimationApi
 @Composable
-fun Content() {
+fun MainContent() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,

@@ -23,6 +23,7 @@ import ru.simple.notes.R
 import ru.simple.notes.components.presentation.util.Dimensions.MEDIUM
 import ru.simple.notes.components.presentation.list.components.Unit
 import ru.simple.notes.components.presentation.list.components.OrderSection
+import ru.simple.notes.components.presentation.util.Dimensions.LIST_BOTTOM_PADDING
 import ru.simple.notes.components.presentation.util.Navigation
 
 @ExperimentalAnimationApi
@@ -92,7 +93,11 @@ fun ListScreen(
                 )
             }
             Spacer(modifier = Modifier.height(MEDIUM))
-            LazyColumn(modifier = Modifier.fillMaxSize()) {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(MEDIUM),
+                contentPadding = PaddingValues(bottom = LIST_BOTTOM_PADDING)
+            ) {
                 items(state.notes) { note ->
                     Unit(note = note,
                         modifier = Modifier
@@ -103,7 +108,7 @@ fun ListScreen(
                             ) {
                                 navController.navigate(Navigation.ItemScreen.route + "?noteId=${note.id}&?noteColor=${note.color}")
                             },
-                        onDeleteClick = {//TODO исправить Snackbar при удалении множества задач
+                        onDeleteClick = {//TODO исправить SnackBar при удалении множества задач
                             viewModel.onEvent(ListEvent.DeleteNote(note))
                             scope.launch {
                                 val result = scaffoldState.snackbarHostState.showSnackbar(
@@ -115,10 +120,8 @@ fun ListScreen(
                             }
                         }
                     )
-                    Spacer(modifier = Modifier.height(MEDIUM))
                 }
             }
         }
     }
 }
-

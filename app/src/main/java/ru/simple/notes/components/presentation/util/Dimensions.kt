@@ -8,4 +8,6 @@ object Dimensions {
     val LARGE = 32.dp
     val CIRCLE_BUTTON_SIZE = 50.dp
     val CIRCLE_BUTTON_BORDER = 3.dp
+    val LIST_BOTTOM_PADDING = 88.dp
+    val MIN_DESCRIPTION_HEIGHT = 128.dp
 }

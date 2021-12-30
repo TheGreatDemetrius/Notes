@@ -1,8 +1,6 @@
 package ru.simple.notes.components.presentation.item
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
@@ -21,7 +19,6 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
 import ru.simple.notes.R
 import ru.simple.notes.components.domain.model.Note
 import ru.simple.notes.components.presentation.util.Dimensions.MEDIUM
@@ -29,6 +26,7 @@ import ru.simple.notes.components.presentation.util.Dimensions.SMALL
 import ru.simple.notes.components.presentation.item.components.TextFieldHint
 import ru.simple.notes.components.presentation.util.Dimensions.CIRCLE_BUTTON_BORDER
 import ru.simple.notes.components.presentation.util.Dimensions.CIRCLE_BUTTON_SIZE
+import ru.simple.notes.components.presentation.util.Dimensions.MIN_DESCRIPTION_HEIGHT
 
 @Composable
 fun ItemScreen(
@@ -67,6 +65,7 @@ fun ItemScreen(
                 .fillMaxSize()
                 .background(color = Color(viewModel.color.value))
                 .padding(MEDIUM)
+                .verticalScroll(rememberScrollState())
         ) {
             Row(
                 modifier = Modifier
@@ -95,7 +94,6 @@ fun ItemScreen(
             }
             Spacer(modifier = Modifier.height(MEDIUM))
             TextFieldHint(
-                modifier = Modifier.fillMaxWidth(),
                 text = titleState.text,
                 hint = titleState.hint,
                 onValueChange = {
@@ -111,7 +109,7 @@ fun ItemScreen(
             )
             Spacer(modifier = Modifier.height(MEDIUM))
             TextFieldHint(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.heightIn(MIN_DESCRIPTION_HEIGHT),
                 text = descriptionState.text,
                 hint = descriptionState.hint,
                 onValueChange = {
