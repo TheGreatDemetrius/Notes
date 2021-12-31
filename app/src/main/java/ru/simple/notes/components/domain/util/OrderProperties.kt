@@ -8,7 +8,7 @@ sealed class OrderProperties(val orderType: OrderType) {
     fun copy(orderType: OrderType): OrderProperties =
         when (this) {
             is Title -> Title(orderType)
-            is Date -> Title(orderType)
-            is Color -> Title(orderType)
+            is Date -> Date(orderType)
+            is Color -> Color(orderType)
         }
 }
