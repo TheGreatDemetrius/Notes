@@ -107,7 +107,7 @@ class ItemViewModel @Inject constructor(
                         _eventFlow.emit(
                             UiEvent.ShowSnackBar(
                                 message =
-                                if (e.message == "titleIsBlank")
+                                if (e is IllegalArgumentException)
                                     res.getString(R.string.enter_title_for_note)
                                 else res.getString(
                                     R.string.failed_save_note

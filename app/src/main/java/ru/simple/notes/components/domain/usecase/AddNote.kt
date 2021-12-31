@@ -7,9 +7,7 @@ import java.lang.Exception
 class AddNote(private val repository: NoteRepository) {
     suspend operator fun invoke(note: Note) {
         if (note.title.isBlank())
-            throw Exception("titleIsBlank")
-        //if (note.description.isBlank())
-        //    throw Exception("descriptionIsBlank")
+            throw IllegalArgumentException()
         repository.addNote(note)
     }
 }
