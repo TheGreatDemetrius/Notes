@@ -14,6 +14,7 @@ import kotlinx.coroutines.launch
 import ru.simple.notes.R
 import ru.simple.notes.components.domain.model.Note
 import ru.simple.notes.components.domain.usecase.ActionsNote
+import java.io.IOException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -107,7 +108,7 @@ class ItemViewModel @Inject constructor(
                         _eventFlow.emit(
                             UiEvent.ShowSnackBar(
                                 message =
-                                if (e is IllegalArgumentException)
+                                if (e is IOException)
                                     res.getString(R.string.enter_title_for_note)
                                 else res.getString(
                                     R.string.failed_save_note
