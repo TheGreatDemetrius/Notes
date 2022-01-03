@@ -9,12 +9,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
-        android:theme="@style/Theme.Note">
+        android:theme="@style/Theme.App.Splash">
         <activity
             android:name="ru.simple.notes.components.presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Note.NoActionBar"
+            android:theme="@style/Theme.App.Splash"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
